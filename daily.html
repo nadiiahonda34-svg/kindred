@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kindred Daily: a playful daily ritual with a question, friendship challenge, conversation cards and a gentle streak to help real connections grow.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://findkindredpeople.com/daily.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kindred Daily — One small connection a day">
+<meta property="og:description" content="Daily questions, conversation cards and tiny social challenges designed to make friendship easier to start and easier to keep.">
+<meta property="og:image" content="https://findkindredpeople.com/community-cafe.png">
+<title>Kindred Daily — One small connection a day</title>
+<style>
+:root{--bg:#f7f4fb;--ink:#171329;--muted:#716b7b;--violet:#7657ff;--pink:#ef5f93;--mint:#4ac7a7;--gold:#ffcc57;--line:#e7e1ee;--paper:#fff;--soft:#f1edff;--shadow:0 24px 70px rgba(50,31,82,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:
+radial-gradient(circle at 10% 0%,rgba(255,204,87,.24),transparent 25rem),
+radial-gradient(circle at 95% 8%,rgba(239,95,147,.17),transparent 24rem),
+radial-gradient(circle at 15% 90%,rgba(74,199,167,.17),transparent 24rem),var(--bg)}
+button,input,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 28px));margin:auto}
+.top{display:flex;align-items:center;gap:18px;margin:14px auto 0;padding:12px 16px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.95);border-radius:18px;box-shadow:0 12px 38px rgba(35,21,60,.07);position:sticky;top:10px;z-index:10}
+.brand{font-size:22px;font-weight:950;text-decoration:none;background:linear-gradient(90deg,#6845ef,#ed4e91,#ff7d3f);-webkit-background-clip:text;background-clip:text;color:transparent}.top nav{margin-left:auto;display:flex;gap:16px}.top a{color:inherit;text-decoration:none;font-weight:750}.top nav a:hover{color:var(--violet)}
+.hero{padding:72px 0 34px;text-align:center}.badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:850;color:var(--violet);box-shadow:0 8px 24px rgba(84,55,140,.07)}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,8vw,78px);line-height:.98;letter-spacing:-2.6px;margin:20px auto 14px;max-width:840px}.hero p{max-width:720px;margin:auto;color:var(--muted);font-size:18px}
+.dashboard{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.card{background:rgba(255,255,255,.94);border:1px solid #fff;border-radius:24px;padding:24px;box-shadow:var(--shadow)}.card h2{margin:0 0 8px;font-size:24px;letter-spacing:-.02em}.muted{color:var(--muted)}.daily-card{min-height:420px;display:flex;flex-direction:column;position:relative;overflow:hidden;background:linear-gradient(150deg,#24163f,#4a2672 58%,#88425f);color:#fff}.daily-card:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,#ffcc57aa,transparent 66%);right:-70px;top:-60px}.daily-card .eyebrow{font-size:12px;font-weight:850;color:#e9ddff;text-transform:uppercase;letter-spacing:.08em}.daily-card h2{font-size:38px;line-height:1.05;margin:18px 0 12px;max-width:560px}.daily-card p{color:#eee7f5;max-width:620px}.daily-card .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:12px 15px;font-weight:850;background:var(--violet);color:#fff}.btn.secondary{background:#ffffff18;border:1px solid #ffffff35}.btn.light{background:#fff;color:#24163f}.btn:focus-visible,.choice:focus-visible,.deck-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.side{display:grid;gap:18px}.streak{display:flex;gap:18px;align-items:center}.streak-num{width:84px;height:84px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(145deg,#fff4b8,#ffd76c);font-size:34px;font-weight:950}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}.day{aspect-ratio:1;border-radius:11px;background:#f0edf4;display:grid;place-items:center;font-size:11px;font-weight:850;color:#8a8193}.day.done{background:#dff6ee;color:#197b64}.day.today{box-shadow:inset 0 0 0 2px var(--violet)}
+.section{padding:72px 0 0}.section-head{text-align:center;max-width:700px;margin:0 auto 24px}.section-head h2{font-size:36px;letter-spacing:-.03em;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
+.question{display:grid;grid-template-columns:1fr .8fr;gap:18px}.prompt{font-size:30px;font-weight:900;line-height:1.25;margin:12px 0 18px}.answer{width:100%;min-height:130px;padding:15px;border:1px solid var(--line);border-radius:15px;resize:vertical;background:#fcfbfe}.saved{display:none;margin-top:12px;padding:12px;border-radius:12px;background:#eaf8f3;color:#186b58;font-weight:750}.saved.show{display:block}
+.vibes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.choice{border:1px solid var(--line);background:#fff;border-radius:16px;padding:18px 12px;text-align:center;font-weight:850}.choice span{display:block;font-size:28px;margin-bottom:8px}.choice.active{border-color:#bcaeff;background:#f2efff;color:#5d42da}
+.deck{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.deck-card{min-height:250px;border:0;border-radius:24px;padding:22px;text-align:left;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}.deck-card strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.09em;opacity:.8}.deck-card b{display:block;font-size:25px;line-height:1.22;margin-top:44px}.deck-card:nth-child(1){background:linear-gradient(145deg,#5f45dd,#8a67ff)}.deck-card:nth-child(2){background:linear-gradient(145deg,#df477e,#ff7d8b)}.deck-card:nth-child(3){background:linear-gradient(145deg,#199b7f,#5acfb0)}.deck-card:after{content:"✦";position:absolute;right:18px;top:12px;font-size:40px;opacity:.22}
+.quest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.quest{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.quest input{width:20px;height:20px;accent-color:var(--violet)}.quest label{display:flex;gap:10px;align-items:flex-start;font-weight:800}.quest p{color:var(--muted);font-size:13px;margin:8px 0 0 30px}.progress{height:12px;background:#e9e5ef;border-radius:999px;overflow:hidden;margin-top:18px}.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--pink),var(--gold));transition:.25s}
+.cosmic{background:linear-gradient(135deg,#fff,#f7f2ff);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}.orb{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;font-size:44px;background:radial-gradient(circle at 30% 30%,#fff4bf,#c7b5ff 45%,#7657ff 74%,#35205f);box-shadow:0 14px 36px rgba(86,54,151,.22)}.cosmic small{display:block;color:var(--muted)}.share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.footer{padding:60px 0 28px;color:var(--muted);font-size:13px}.footer a{color:var(--muted)}
+@media(max-width:820px){.dashboard,.question{grid-template-columns:1fr}.vibes{grid-template-columns:1fr 1fr}.deck,.quest-grid{grid-template-columns:1fr}.top nav a:nth-child(2){display:none}}
+@media(max-width:520px){.top{gap:10px}.top nav{gap:10px;font-size:13px}.hero{padding-top:48px}.daily-card h2{font-size:32px}.vibes{grid-template-columns:1fr 1fr}.cosmic{grid-template-columns:1fr}.orb{width:82px;height:82px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Kindred Daily","url":"https://findkindredpeople.com/daily.html","description":"A playful daily ritual with conversation prompts, friendship challenges and gentle streaks for building real connections.","isPartOf":{"@type":"WebSite","name":"Kindred","url":"https://findkindredpeople.com/"}}</script>
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="index.html">Kindred ✦</a><nav><a href="daily.html">Daily</a><a href="index.html#lottery">Dice</a><a href="index.html#forum">Forum</a><a href="guides.html">Guides</a></nav></header>
+<main>
+<section class="wrap hero"><span class="badge">✨ A small ritual, not an endless feed</span><h1>One small connection a day</h1><p>Open Kindred Daily for a fresh question, a tiny social challenge and one conversation card. Come back tomorrow for a new set.</p></section>
+
+<section class="wrap dashboard">
+<article class="card daily-card">
+<div class="eyebrow" id="dailyDate">TODAY</div>
+<h2 id="dailyTitle">Your Daily Spark</h2>
+<p id="dailyText"></p>
+<div class="actions"><button class="btn light" id="completeSpark">I did this</button><button class="btn secondary" id="newSpark">Another spark</button><button class="btn secondary" id="shareSpark">Share</button></div>
+</article>
+<div class="side">
+<article class="card"><div class="streak"><div class="streak-num"><span id="streakCount">0</span>🔥</div><div><h2>Your gentle streak</h2><p class="muted">Open Daily and complete one small action. Missing a day never resets your progress to zero.</p></div></div><div class="week" id="week"></div></article>
+<article class="card cosmic"><div class="orb" id="orb">✦</div><div><h2 id="cosmicTitle">Cosmic Card</h2><p id="cosmicText" class="muted"></p><small>For fun and reflection — not a prediction.</small><div class="share-row"><button class="btn" id="newCosmic">Reveal another</button></div></div></article>
+</div>
+</section>
+
+<section class="wrap section"><div class="section-head"><h2>Question of the day</h2><p>Something worth answering — and something you can send to a friend when the chat goes quiet.</p></div>
+<div class="question">
+<article class="card"><div class="prompt" id="questionText"></div><textarea class="answer" id="answerText" placeholder="Write a private note to yourself..."></textarea><div class="share-row"><button class="btn" id="saveAnswer">Save privately</button><button class="btn" id="shareQuestion">Send the question</button></div><div class="saved" id="savedAnswer">Saved on this device.</div></article>
+<article class="card"><h2>How do you feel social today?</h2><p class="muted">Pick a vibe. Kindred will suggest a matching kind of connection.</p><div class="vibes" id="vibes"><button class="choice" data-vibe="quiet"><span>🌙</span>Quiet</button><button class="choice" data-vibe="curious"><span>✨</span>Curious</button><button class="choice" data-vibe="social"><span>☀️</span>Social</button><button class="choice" data-vibe="adventurous"><span>🚀</span>Adventurous</button></div><p id="vibeTip" class="muted" style="margin-top:16px">Choose your vibe to get a suggestion.</p></article>
+</div></section>
+
+<section class="wrap section"><div class="section-head"><h2>Draw a conversation card</h2><p>Tap any card to reveal a new prompt. Use it in chat, on a walk or at a group meetup.</p></div>
+<div class="deck">
+<button class="deck-card" data-deck="light"><strong>Light</strong><b id="lightCard">What tiny thing made your day better recently?</b></button>
+<button class="deck-card" data-deck="real"><strong>Real</strong><b id="realCard">What do you wish people understood about you sooner?</b></button>
+<button class="deck-card" data-deck="playful"><strong>Playful</strong><b id="playfulCard">If today had a soundtrack, what song would open it?</b></button>
+</div></section>
+
+<section class="wrap section"><div class="section-head"><h2>Today’s friendship quest</h2><p>Three tiny actions. Complete one or all three — the goal is momentum, not perfection.</p></div>
+<div class="quest-grid">
+<article class="quest"><label><input type="checkbox" data-quest="1"> Send one message first</label><p>No perfect opener needed. “How’s your day going?” counts.</p></article>
+<article class="quest"><label><input type="checkbox" data-quest="2"> React to someone’s story or post</label><p>A small signal can make it easier for the next conversation to start.</p></article>
+<article class="quest"><label><input type="checkbox" data-quest="3"> Make one simple plan</label><p>Coffee, a walk, a call or a game. Keep it easy to say yes to.</p></article>
+</div><div class="progress"><div id="questProgress"></div></div></section>
+
+<section class="wrap section"><article class="card"><h2>Why Daily exists</h2><p class="muted">Kindred is designed to help people connect, not keep them scrolling forever. Daily gives you a reason to return, but every activity points outward: start a conversation, learn something real about someone, or make a simple plan together.</p><div class="share-row"><a class="btn" style="text-decoration:none" href="index.html#lottery">Try Social Dice</a><a class="btn" style="text-decoration:none;background:#171329" href="index.html#forum">Open the Forum</a></div></article></section>
+</main>
+<footer class="wrap footer">© 2026 Kindred · <a href="safety.html">Safety</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></footer>
+<script>
+(()=> {
+ const today=new Date(),key=today.toISOString().slice(0,10),day=today.getDay();
+ const seed=[today.getFullYear(),today.getMonth()+1,today.getDate()].reduce((a,b)=>a*31+b,7);
+ const pick=(arr,offset=0)=>arr[(seed+offset)%arr.length];
+ const sparks=[
+  ["Say hello first","Send a short message to someone you like talking to. No perfect opener — one warm sentence is enough."],
+  ["Make a tiny plan","Invite someone to something simple: a coffee, short walk, quick call or one round of a game."],
+  ["Ask one better question","Instead of “How are you?”, ask what has been taking up most of their attention lately."],
+  ["Reconnect gently","Message someone you have not spoken to in a while: “I thought of you today — how have you been?”"],
+  ["Give a specific compliment","Tell someone one concrete thing you appreciate about how they think, listen, create or show up."],
+  ["Share a small truth","Tell someone one ordinary but real thing about your day. Closeness often grows from small honesty."],
+  ["Turn chat into a moment","If a conversation is going well, suggest a voice note, coffee, walk or game instead of ending with “sometime.”"]
+ ];
+ const questions=[
+  "What kind of friendship feels easiest for you to maintain — and why?",
+  "What is something small that makes you feel immediately comfortable around someone?",
+  "When do you feel most like yourself around other people?",
+  "What would you love to have a regular buddy for?",
+  "What is one friendship habit you want more of in your life?",
+  "What topic can you talk about for far longer than most people expect?",
+  "What makes a new place start to feel like home?"
+ ];
+ const cosmic=[
+  ["Open Door","A good day for one low-pressure invitation. Keep the plan simple enough that saying yes feels easy.","🚪"],
+  ["Warm Orbit","Notice who leaves you feeling calmer after you talk. That is useful information.","🪐"],
+  ["Tiny Signal","A reaction, reply or short voice note can be enough to restart a connection.","✨"],
+  ["Shared Ground","Look for one real overlap instead of trying to be interesting. Common ground creates momentum.","🌍"],
+  ["Soft Courage","Starting first can feel vulnerable. Make the first move small, not dramatic.","🌙"],
+  ["Play Mode","Use a game, question or funny prompt when conversation feels too serious or forced.","🎲"],
+  ["Clear Sky","Say what you actually want: coffee, a walk, a language buddy, a friend to message, or a game partner.","☀️"]
+ ];
+ const light=["What tiny thing made your day better recently?","What snack, café or place are you currently obsessed with?","What is your ideal lazy Sunday?","What is one small thing you always notice about a city?","What is your comfort movie or series?"];
+ const real=["What do you wish people understood about you sooner?","What helps you trust someone?","When do you feel most supported by a friend?","What kind of friendship have you outgrown?","What makes you feel included in a group?"];
+ const playful=["If today had a soundtrack, what song would open it?","Pick one: spontaneous road trip or perfectly planned weekend?","If your mood were a weather forecast, what would it say?","What useless talent would win you a tiny trophy?","If we had to start a club together, what would it be?"];
+ document.getElementById("dailyDate").textContent=today.toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"});
+ const sp=pick(sparks); document.getElementById("dailyTitle").textContent=sp[0];document.getElementById("dailyText").textContent=sp[1];
+ document.getElementById("questionText").textContent=pick(questions,3);
+ const cc=pick(cosmic,6);document.getElementById("cosmicTitle").textContent=cc[0];document.getElementById("cosmicText").textContent=cc[1];document.getElementById("orb").textContent=cc[2];
+
+ const history=JSON.parse(localStorage.getItem("kindredDailyHistory")||"[]");
+ function markToday(){
+  if(!history.includes(key)){history.push(key);history.splice(0,Math.max(0,history.length-30));localStorage.setItem("kindredDailyHistory",JSON.stringify(history))}
+  renderStreak();
+ }
+ function renderStreak(){
+  const sorted=[...history].sort(),dates=new Set(sorted);let count=0,d=new Date(today);
+  for(let i=0;i<30;i++){const k=d.toISOString().slice(0,10);if(dates.has(k)){count++;d.setDate(d.getDate()-1)}else if(i===0){d.setDate(d.getDate()-1)}else break}
+  document.getElementById("streakCount").textContent=count;
+  const week=document.getElementById("week");week.innerHTML="";
+  for(let i=6;i>=0;i--){const x=new Date(today);x.setDate(today.getDate()-i);const k=x.toISOString().slice(0,10),el=document.createElement("div");el.className="day"+(dates.has(k)?" done":"")+(i===0?" today":"");el.textContent=x.toLocaleDateString(undefined,{weekday:"narrow"});week.appendChild(el)}
+ }
+ renderStreak();
+ document.getElementById("completeSpark").onclick=()=>{markToday();document.getElementById("completeSpark").textContent="Done today ✓"};
+ let sparkShift=1;document.getElementById("newSpark").onclick=()=>{const s=sparks[(seed+sparkShift++)%sparks.length];document.getElementById("dailyTitle").textContent=s[0];document.getElementById("dailyText").textContent=s[1]};
+ async function shareText(text){try{if(navigator.share)await navigator.share({title:"Kindred Daily",text,url:location.href});else{await navigator.clipboard.writeText(text+" "+location.href);alert("Copied to clipboard")}}catch(e){}}
+ document.getElementById("shareSpark").onclick=()=>shareText(document.getElementById("dailyTitle").textContent+": "+document.getElementById("dailyText").textContent);
+ document.getElementById("shareQuestion").onclick=()=>shareText("Kindred question of the day: "+document.getElementById("questionText").textContent);
+ document.getElementById("saveAnswer").onclick=()=>{localStorage.setItem("kindredDailyAnswer:"+key,document.getElementById("answerText").value);document.getElementById("savedAnswer").classList.add("show")};
+ document.getElementById("answerText").value=localStorage.getItem("kindredDailyAnswer:"+key)||"";
+ const tips={quiet:"Try one low-pressure connection: reply to a story, send a reaction or message one person you already know.",curious:"Ask someone one question you genuinely want the answer to. Curiosity makes conversation easier.",social:"Turn one chat into a real plan today — coffee, a walk, a call or a game.",adventurous:"Try a new group, topic or activity and introduce yourself to one person there."};
+ document.querySelectorAll(".choice").forEach(b=>b.onclick=()=>{document.querySelectorAll(".choice").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById("vibeTip").textContent=tips[b.dataset.vibe];localStorage.setItem("kindredVibe:"+key,b.dataset.vibe)});
+ const oldVibe=localStorage.getItem("kindredVibe:"+key);if(oldVibe){const b=document.querySelector('[data-vibe="'+oldVibe+'"]');if(b)b.click()}
+ const decks={light,real,playful};let shifts={light:1,real:1,playful:1};document.querySelectorAll(".deck-card").forEach(btn=>btn.onclick=()=>{const type=btn.dataset.deck,arr=decks[type],text=arr[(seed+shifts[type]++)%arr.length];document.getElementById(type+"Card").textContent=text});
+ const qKey="kindredQuests:"+key,qSaved=JSON.parse(localStorage.getItem(qKey)||"[]");
+ function qRender(){const checked=[...document.querySelectorAll("[data-quest]:checked")].length;document.getElementById("questProgress").style.width=(checked/3*100)+"%";if(checked>0)markToday()}
+ document.querySelectorAll("[data-quest]").forEach(x=>{if(qSaved.includes(x.dataset.quest))x.checked=true;x.onchange=()=>{const a=[...document.querySelectorAll("[data-quest]:checked")].map(i=>i.dataset.quest);localStorage.setItem(qKey,JSON.stringify(a));qRender()}});
+ qRender();
+ let cosmicShift=1;document.getElementById("newCosmic").onclick=()=>{const x=cosmic[(seed+6+cosmicShift++)%cosmic.length];document.getElementById("cosmicTitle").textContent=x[0];document.getElementById("cosmicText").textContent=x[1];document.getElementById("orb").textContent=x[2]};
+})();
+</script>
+</body></html>
