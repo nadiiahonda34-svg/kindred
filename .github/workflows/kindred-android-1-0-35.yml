@@ -28,8 +28,12 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Android command line tools
-        uses: android-actions/setup-android@v3
+      - name: Verify preinstalled Android tools
+        shell: bash
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          command -v sdkmanager
+          sdkmanager --version
 
       - name: Install Android SDK API 37
         shell: bash
