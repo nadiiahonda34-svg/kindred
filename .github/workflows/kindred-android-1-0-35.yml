@@ -39,8 +39,8 @@ jobs:
         run: |
           set -euo pipefail
           yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager --install "platform-tools" "platforms;android-37" "build-tools;36.0.0"
-          test -f "${ANDROID_HOME}/platforms/android-37/android.jar"
+          sdkmanager --install "platform-tools" "platforms;android-37.0" "build-tools;36.0.0" --channel=3
+          test -f "${ANDROID_HOME}/platforms/android-37.0/android.jar"
           test -x "${ANDROID_HOME}/build-tools/36.0.0/aapt2"
           echo "### Android SDK successfully installed" >> "$GITHUB_STEP_SUMMARY"
           echo "Platform: API 37, Build Tools: 36.0.0" >> "$GITHUB_STEP_SUMMARY"
